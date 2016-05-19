@@ -1,0 +1,37 @@
+ <div class="container">
+      <div class="jumbotron">
+        <div class="row">
+          <div class="col-lg-6">
+            <h1><%= @track.title %></h1>
+            <p><%= @track.author %></p>
+            <p><%= @track.URL %></p>
+            <div class="col-lg-6">
+           <div class="row">
+            <div class="col">
+              <form method="post" action="/tracks/<%=track.id%>">
+                <div class="box box-orange box-example-1to10">
+                  <div class="box-header">1/10 Rating</div>
+                  <div class="box-body">
+                    <select id="example-1to10" name="rating">
+                      <option value=1>1</option>
+                      <option value=2>2</option>
+                      <option value=3>3</option>
+                      <option value=4>4</option>
+                      <option value=5>5</option>
+                      <option value=6>6</option>
+                      <option value=7>7</option>
+                      <option value=8>8</option>
+                      <option value=9>9</option>
+                      <option value=10>10</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <p><a class="btn btn-lg btn-success" href="#signup" role="button">Comment</a></p>
