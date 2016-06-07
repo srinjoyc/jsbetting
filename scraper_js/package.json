@@ -1,0 +1,19 @@
+{
+  "name": "scraper_js",
+  "version": "1.0.0",
+  "description": "scraping the web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srinjoyc/js_scraper.git"
+  },
+  "author": "Srinjoy Chakraborty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/srinjoyc/js_scraper/issues"
+  },
+  "homepage": "https://github.com/srinjoyc/js_scraper#readme"
+}
