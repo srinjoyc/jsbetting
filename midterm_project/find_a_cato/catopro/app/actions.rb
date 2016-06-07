@@ -13,7 +13,7 @@ get '/' do
 end
 
 get '/user' do
-  @user = User.new
+    @user = User.new
   erb :'user/index'
 end
 
@@ -37,8 +37,10 @@ end
 
 
 get '/user/:id' do
-  @user = User.find params[:id]
-  erb :'user_dash'
+  # if @user = User.find params[:id]
+    @user = User.find params[:id]
+    erb :'/user_dash'
+
 end
 
 ### FIX IT ###
@@ -48,15 +50,18 @@ end
 # end
 
 post '/user/:id/encounter' do
-  @encounter = Encounter.create(
+  @encounter = Encounter.new(
     attacker_id: nil,
     defender_id: session[:user_id],
     date: params[:date],
     tier: params[:tier],
     location: params[:location]
-
   )
-  redirect :'user_dash'
+  if @encounter.save
+    redirect :"user/#{@encounter.defender_id}"
+  else
+    erb :index 
+  end 
 end
 
 # ##### FOR KATO #######

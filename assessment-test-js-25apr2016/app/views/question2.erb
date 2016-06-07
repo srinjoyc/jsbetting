@@ -1,0 +1,51 @@
+<style>
+
+.number{
+  font-style: italic;
+}
+.day{
+  color:blue;
+}
+
+</style>
+
+
+<p>Write a function that takes in an array of values, and outputs every <strong>third</strong> element, line by line, by appending them into the Gray Box below. So you will skip the first two elements, append the third, skip the fourth and fifth, etc.<p>
+
+<p>Rules for what to output in the box:</p>
+<ul>
+  <li>If the value is the name of a day of the week, print it in blue.</li>
+  <li>If the value is a number, print it italicized.</li>
+  <li>Otherwise, leave it unstyled.</li>
+</ul>
+
+<p>Edit the page source to begin.</p>
+
+<div class='question'>
+  <h2>Gray Box</h2>
+</div>
+
+<script>
+
+  $(function() {
+    var daysOfWeek=['Monday', 'Tuesday', 'Wednesday',
+                    'Thursday','Friday','Saturday','Sunday'];
+
+    function addItemsToGrayBox(items) {
+      $(items).each(function(index, word){
+      var type = typeof word;
+      var item = $("<div>" + word + "</div>");
+      if($.inArray(word,daysOfWeek) > 0){
+        item = item.attr("class", "day");
+      } else {
+        item = item.attr("class", type);
+      }
+        $(".question").append(item);
+      });
+    }
+
+    addItemsToGrayBox(["Toast", {key: "Value"}, "Tuesday", "Ointment", "Saturday", 817, "Lurk", ["Battery"], "Friday", 8, 345.3, "Birthday", "a", "Rubber Duck"]);
+  });
+
+</script>
+

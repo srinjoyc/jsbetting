@@ -1,0 +1,43 @@
+<style>
+
+	/**** YOU MAY ADD OR MODIFY CSS BELOW ****/
+		ul li {
+			background-color: #ddd;
+			padding: 10px;
+			color: black;
+		}
+
+		ul li.active {
+			background-color: white;
+			color: blue;
+	/**** STOP MODIFYING HERE. ****/
+
+</style>
+
+<p>In the box below is an unordered list. Here is what you need to do:
+	<ol>
+		<li>Make the &lt;li&gt; tags clickable.</li>
+		<li>Add the active class (defined above) to the li when it is clicked.</li>
+		<li>Ensure that there is only ever <strong>ONE</strong> li element with the active class at a time.</li>
+	</ol>	
+</p>
+
+<div class="question">
+	<ul>
+		<li><a href="#">Moe</a></li>
+		<li><a href="#">Larry</a></li>
+		<li><a href="#">Curly</a></li>
+		<li><a href="#">Abbott</a></li>
+		<li><a href="#">Costello</a></li>
+	</ul>
+</div>
+
+<script>
+	$(function() {
+		$("li").click(function(e){
+			$("ul li").removeClass("active");
+			$(this).addClass("active");
+		});
+	});
+</script>
+

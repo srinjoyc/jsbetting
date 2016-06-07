@@ -1,0 +1,30 @@
+<p>Write a function called <code>findZedWords</code> that takes in an array of words, and returns <strong>all the words that <em>start</em> with the letter Z</strong>.</p>
+<p>Refresh the page to rerun the assertions (tests). With the correct solution in the dedicated area, the failing tests below should succeed.</p>
+<p>Tip: Use the DevTools Console to test your function's return value manually.</p>
+<p>Edit the page source to begin.</p>
+
+<script>
+
+$(function() {
+
+		/**** YOU MAY MODIFY THE CODE BELOW ****/
+
+		function findZedWords(words) {
+			var found = [];
+			for(var i = 0; i < words.length; i++){
+				var word = words[i];
+				if (word.charAt(0) === 'Z'){
+					found.push(word);
+				}
+			}
+			return found;
+		}
+
+
+		assertArraysEqual(findZedWords(['Zoons', 'Ceasar', 'Idefix']), ['Zoons']);
+		assertArraysEqual(findZedWords(['Pure', 'Zooey', 'Tazza', 'Zills']), ['Zooey', 'Zills']);
+		assertArraysEqual(findZedWords(['A', 'B', 'C']), []);
+
+});
+</script>
+
